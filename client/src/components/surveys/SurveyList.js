@@ -22,7 +22,7 @@ class SurveyList extends Component {
     }
 
     renderContent() {
-        if (this.props.surveys.length > 2) {
+        if (this.props.surveys.length) {
             return this.props.surveys.reverse().map(survey => {
                 return (
                     <div className="card blue-grey darken-1" key={survey._id}>
@@ -47,21 +47,13 @@ class SurveyList extends Component {
             })
         }
 
-        // return (
-        //     <div style={{ marginTop: '50px' }} className="center" >
-        //         Click below button to add your first Survey
-        //     </div>
-        // );
-
         return (
-            <div style={{ marginTop: '50px', }} >
-                <h5>
-                    Let me help you to create your first survey
-                </h5>
+            <div style={{ marginTop: '50px' }} >
+                <h5>Let me help you to create your first survey</h5>
+
                 <ul className="browser-default">
                     <li>Click + button to add survey and collect feedback</li>
-                    <li>You have 2 free credits to try our product!</li>
-                    <li>You can add more credits from top nav-bar</li>
+                    <li>Add credits from nav-bar to send survey emails</li>
                 </ul>
             </div>
         );
