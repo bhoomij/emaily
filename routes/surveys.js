@@ -92,4 +92,11 @@ router.post('/webhooks', (req, res) => {
 
 });
 
+
+router.delete('/:surveyId', requireLogin, async (req, res) => {
+    const result = await Survey.findByIdAndRemove(req.params.surveyId);
+
+    res.send(result);
+});
+
 module.exports = router;
