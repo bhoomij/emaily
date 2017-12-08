@@ -11,11 +11,11 @@ const Landing = () => {
                     Wondering to take your business to new heights?<br />
                     We'll be happy to be part of your success<br /><br />
                     With <i>Emaily</i>, collect feedback from your users abour your services <br />
-                    For more info, click <Link to="/surveys" className="blue-text">Next</Link>
+                    For more info, please login
                 </span>
             </div>
         </div>
     );
 };
-//keyboard_arrow_right navigate_next
+
 export default Landing;
