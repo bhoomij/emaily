@@ -3,7 +3,7 @@ const RecipientSchema = require('./recipients');
 
 const surveySchema = new mongoose.Schema({
     title: String,
-    body: String,
+    content: String,
     subject: String,
     recipients: [RecipientSchema],
     yes: { type: Number, default: 0 },
