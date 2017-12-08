@@ -54,6 +54,7 @@ class SurveyList extends Component {
                 <ul className="browser-default">
                     <li>Click + button to add survey and collect feedback</li>
                     <li>Add credits from nav-bar to send survey emails</li>
+                    <li>You can track survey yes/no reponse count from your emaily dashboard</li>
                 </ul>
             </div>
         );

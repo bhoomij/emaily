@@ -8,14 +8,14 @@ const Landing = () => {
 
             <div class="card-panel grey darken-1 container" style={{ margin: '0 auto', fontSize: '16px' }}>
                 <span class="white-text">
-                    Thinking of reaching you business to new heights?<br />
-                    We will be happy to be part of your success<br /><br />
-                    With <i>Emaily</i>, collect feedback from your users <br />
-                    Do checkout out <Link to="/surveys">here</Link> for more info...
+                    Wondering to take your business to new heights?<br />
+                    We'll be happy to be part of your success<br /><br />
+                    With <i>Emaily</i>, collect feedback from your users abour your services <br />
+                    For more info, click <Link to="/surveys" className="blue-text">Next</Link>
                 </span>
             </div>
         </div>
     );
 };
-
+//keyboard_arrow_right navigate_next
 export default Landing;
