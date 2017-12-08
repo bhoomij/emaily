@@ -6,7 +6,7 @@ const Landing = () => {
         <div style={{ textAlign: 'center' }}>
             <h1>Emaily!</h1>
 
-            <div class="card-panel grey darken-1 container" style={{ margin: '0 auto' }}>
+            <div class="card-panel grey darken-1 container" style={{ margin: '0 auto', fontSize: '16px' }}>
                 <span class="white-text">
                     Thinking of reaching you business to new heights?<br />
                     We will be happy to be part of your success<br /><br />
