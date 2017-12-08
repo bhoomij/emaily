@@ -12,7 +12,7 @@ router.post('/stripe', requireLogin, async (req, res) => {
     const { id, email } = req.body;
     const charge = await stripe.charges.create({
         amount: 4000,
-        currency: "inr",
+        currency: "INR",
         source: id,
         description: `Charge 40 Rs. for 40 email credits for ${email}`
     });

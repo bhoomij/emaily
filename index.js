@@ -12,7 +12,8 @@ mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
 require('./services/passport');
 const authRoutes = require('./routes/auth');
-const apiRoutes = require('./routes/api');
+const billingRoutes = require('./routes/api');
+const surveyRoutes = require('./routes/surveys');
 
 const PORT = process.env.PORT || 5000;
 
@@ -27,7 +28,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/auth', authRoutes);
-app.use('/api', apiRoutes);
+app.use('/api', billingRoutes);
+app.use('/api/surveys', surveyRoutes);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
