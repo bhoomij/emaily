@@ -41,6 +41,9 @@ class SurveyList extends Component {
                         <div className="card-action">
                             <a>Yes: {survey.yes}</a>
                             <a>No: {survey.no}</a>
+                            <button className="right valign-wrapper"
+                                onClick={() => this.props.deleteSurvey(survey._id)}
+                            ><i className="material-icons">delete_forever</i></button>
                         </div>
                     </div >
                 );

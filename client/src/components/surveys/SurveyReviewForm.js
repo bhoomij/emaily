@@ -40,7 +40,6 @@ const SurveyReviewForm = ({ formValues, onBackClick, submitSurvey, history, auth
 }
 
 function mapStateToProps({ form, auth }) {
-    console.log(auth);
     return { formValues: form.surveyForm.values, auth };
 }
 
