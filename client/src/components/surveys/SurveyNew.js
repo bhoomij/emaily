@@ -17,7 +17,7 @@ class SurveyNew extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{ marginTop: '10px' }}>
                 {this.renderContent()}
             </div>
         );

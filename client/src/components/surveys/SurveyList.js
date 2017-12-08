@@ -22,28 +22,49 @@ class SurveyList extends Component {
     }
 
     renderContent() {
-        return this.props.surveys.reverse().map(survey => {
-            return (
-                <div className="card blue-grey darken-1" key={survey._id}>
-                    <div className="card-content white-text">
-                        <span className="card-title">{survey.title}</span>
-                        <p>{survey.content}</p>
-                        <div style={{ marginTop: '10px' }}>
-                            <p className="left">
-                                <i>
-                                    Sent On: {new Date(survey.dateSent).toLocaleDateString()}
-                                </i>
-                            </p>
-                            {this.renderLastResponseDate(survey)}
+        if (this.props.surveys.length > 2) {
+            return this.props.surveys.reverse().map(survey => {
+                return (
+                    <div className="card blue-grey darken-1" key={survey._id}>
+                        <div className="card-content white-text">
+                            <span className="card-title">{survey.title}</span>
+                            <p>{survey.content}</p>
+                            <div style={{ marginTop: '10px' }}>
+                                <p className="left">
+                                    <i>
+                                        Sent On: {new Date(survey.dateSent).toLocaleDateString()}
+                                    </i>
+                                </p>
+                                {this.renderLastResponseDate(survey)}
+                            </div>
                         </div>
-                    </div>
-                    <div className="card-action">
-                        <a>Yes: {survey.yes}</a>
-                        <a>No: {survey.no}</a>
-                    </div>
-                </div >
-            );
-        })
+                        <div className="card-action">
+                            <a>Yes: {survey.yes}</a>
+                            <a>No: {survey.no}</a>
+                        </div>
+                    </div >
+                );
+            })
+        }
+
+        // return (
+        //     <div style={{ marginTop: '50px' }} className="center" >
+        //         Click below button to add your first Survey
+        //     </div>
+        // );
+
+        return (
+            <div style={{ marginTop: '50px', }} >
+                <h5>
+                    Let me help you to create your first survey
+                </h5>
+                <ul className="browser-default">
+                    <li>Click + button to add survey and collect feedback</li>
+                    <li>You have 2 free credits to try our product!</li>
+                    <li>You can add more credits from top nav-bar</li>
+                </ul>
+            </div>
+        );
     }
 
     render() {

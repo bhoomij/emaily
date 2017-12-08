@@ -28,12 +28,12 @@ const SurveyReviewForm = ({ formValues, onBackClick, submitSurvey, history, auth
                 >Back</button>
                 <button className="right green white-text btn-flat"
                     onClick={() => submitSurvey(formValues, history)}
-                    disabled={auth.credits < 0} >
+                    disabled={auth.credits < 1} >
                     Send Survey<i className="material-icons right">email</i>
                 </button>
             </div>
             <div className="right red-text" style={{ clear: 'both', marginRight: '25px' }}>
-                {auth.credits < 0 ? 'Not enough credits!' : ''}
+                {auth.credits < 1 ? 'Not enough credits!' : ''}
             </div>
         </div>
     );
