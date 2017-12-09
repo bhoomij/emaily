@@ -3,6 +3,7 @@ const RecipientSchema = require('./recipients');
 
 const surveySchema = new mongoose.Schema({
     title: String,
+    from_email: String,
     content: String,
     subject: String,
     recipients: [RecipientSchema],

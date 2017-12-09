@@ -15,12 +15,16 @@ class SurveyForm extends Component {
                 <Field
                     key={field.name}
                     label={field.label}
-                    type="text"
+                    type='text'
                     name={field.name}
                     component={SurveyField}
                 />
             );
         });
+    }
+
+    componentDidMount() {
+        this.props.initialize({ from_email: 'no-reply@emaily.com' });
     }
 
     onFormSubmit() {
@@ -54,6 +58,8 @@ function validate(values) {
     const errors = {};
 
     errors.recipients = emailValidator(values.recipients || '');
+
+    errors.from_email = emailValidator(values.from_email || '');
 
     surveyFields.forEach(({ name, noValueError }) => {
         if (!values[name]) {

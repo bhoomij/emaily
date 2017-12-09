@@ -18,10 +18,11 @@ router.get('/', requireLogin, async (req, res) => {
 });
 
 router.post('/', requireLogin, requireCredits, async (req, res) => {
-    const { title, subject, content, recipients } = req.body;
+    const { title, subject, content, recipients, from_email } = req.body;
 
     const survey = new Survey({
         title,
+        from_email,
         subject,
         content,
         recipients: recipients.split(',').map(email => ({ email: email.trim() })),
